@@ -21,14 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    //滚动视图
-    LZAutoScrollView *lzAutoScrollView = [[LZAutoScrollView alloc] initWithFrame:CGRectMake(0, 0, 375, 220)];
-    lzAutoScrollView.pageControlAligment = PageControlAligmentRight;
-    lzAutoScrollView.interval = 4;
-    [self.view addSubview:lzAutoScrollView];
-    
-    
+
     _homeImageArray = @[].mutableCopy;
     
     HomeNetApi *api = [[HomeNetApi alloc] initWithVid:@"403"];
@@ -42,7 +35,6 @@
         
 //        NSLog(@"%@",_homeImageArray);
 //        
-//        lzAutoScrollView.images = _homeImageArray;
         
         
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
