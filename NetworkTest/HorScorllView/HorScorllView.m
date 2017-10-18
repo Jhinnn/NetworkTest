@@ -37,8 +37,7 @@
         self.imageButton.frame = CGRectMake(i * ImageButtonWidth, 0, ImageButtonWidth, ImageButtonWidth);
         self.imageButton.layer.masksToBounds = YES;
         self.imageButton.layer.cornerRadius = ImageButtonWidth / 2;
-//        self.imageButton.layer.borderColor = [UIColor blackColor].CGColor;
-//        self.imageButton.layer.borderWidth = 0.5;
+        [self.imageButton addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
         self.imageButton.tag = i + 100;
 
         self.imageButton.transform = CGAffineTransformMakeScale(0.78, 0.78);
@@ -76,6 +75,12 @@
         textLabel.text = _titles[i];
     }
     
+}
+
+- (void)clickAction:(UIButton *)button {
+    if ([self.delegate respondsToSelector:@selector(horImageClickAction:)]) {
+        [self.delegate horImageClickAction:button.tag];
+    }
 }
 
 

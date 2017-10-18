@@ -10,11 +10,11 @@
 #import "HomeNetApi.h"
 #import "HomeImagesModel.h"
 #import "HorScorllView.h"
-@interface ViewController ()
+@interface ViewController () <HorScorllViewImageClickDelegate>
 
 @end
 
-@implementation ViewController {
+@implementation ViewController  {
     NSMutableArray *_homeImageArray;
     NSMutableArray *_homeTitleArray;
     
@@ -28,16 +28,13 @@
 
     [self loadNetworkData];
     
-
-   
-    
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)setupUI {
     
      _horScorllView = [[HorScorllView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, [UIScreen mainScreen].bounds.size.width, 100)];
+    _horScorllView.delegate = self;
     [self.view addSubview:_horScorllView];
     
 }
@@ -52,13 +49,11 @@
         
         NSLog(@"%@",request.responseObject);
         for (NSDictionary *dic in request.responseObject[@"result"]) {
-            HomeImagesModel *model = [[HomeImagesModel alloc] initWithDataDic:dic];
+//            HomeImagesModel *model = [[HomeImagesModel alloc] initWithDataDic:dic];
             [_homeImageArray addObject:dic[@"path"]];
             [_homeTitleArray addObject:dic[@"name"]];
             
         }
-        
-        
         
         _horScorllView.titles = _homeTitleArray;
         _horScorllView.images = _homeImageArray;
@@ -66,6 +61,12 @@
     } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
         
     }];
+}
+
+- (void)horImageClickAction:(NSInteger)tag {
+    NSLog(@"你点击的按钮tag值为：%ld",tag);
+    
+    
 }
 
 

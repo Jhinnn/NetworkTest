@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol HorImageClickDelegate <NSObject>
+@protocol HorScorllViewImageClickDelegate <NSObject>
 
-- (void)horImageClickAction;
+- (void)horImageClickAction:(NSInteger)tag;
 
 @end
 
@@ -19,6 +19,8 @@
 @property (nonatomic, strong) NSArray *images;  /**图片*/
 
 @property (nonatomic, strong) NSArray *titles;  /**标题*/
+
+@property (nonatomic, weak) __weak id<HorScorllViewImageClickDelegate> delegate;
 
 
 @end
