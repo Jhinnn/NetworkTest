@@ -23,7 +23,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"Vegetable/info/";
+    return @"Index/vegtype";
 }
 
 - (id)requestArgument {

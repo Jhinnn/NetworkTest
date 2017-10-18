@@ -32,7 +32,8 @@
 		8E076F4D1F8F51AE00EA3B70 /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E076F2E1F8F47E600EA3B70 /* YTKNetworkPrivate.m */; };
 		8E076F501F8F59F800EA3B70 /* HomeImagesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E076F4F1F8F59F800EA3B70 /* HomeImagesModel.m */; };
 		8E076F541F8F5D2500EA3B70 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E076F531F8F5CF600EA3B70 /* BaseModel.m */; };
-		8E076F581F8F615100EA3B70 /* LZAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E076F571F8F610B00EA3B70 /* LZAutoScrollView.m */; };
+		8E6BC4161F9766DC00FE5FEE /* HorScorllView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BC4131F9764C900FE5FEE /* HorScorllView.m */; };
+		8E6BC4191F976ACD00FE5FEE /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6BC4171F976ACD00FE5FEE /* UIButton+WebCache.m */; };
 		FEDDF9B1C6B08B95C6907CC2 /* libPods-NetworkTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8763DA11F1C605A0115D5F /* libPods-NetworkTest.a */; };
 /* End PBXBuildFile section */
 
@@ -110,8 +111,10 @@
 		8E076F4F1F8F59F800EA3B70 /* HomeImagesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeImagesModel.m; sourceTree = "<group>"; };
 		8E076F521F8F5CF600EA3B70 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		8E076F531F8F5CF600EA3B70 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
-		8E076F561F8F610B00EA3B70 /* LZAutoScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZAutoScrollView.h; sourceTree = "<group>"; };
-		8E076F571F8F610B00EA3B70 /* LZAutoScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZAutoScrollView.m; sourceTree = "<group>"; };
+		8E6BC4121F9764C900FE5FEE /* HorScorllView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorScorllView.h; sourceTree = "<group>"; };
+		8E6BC4131F9764C900FE5FEE /* HorScorllView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorScorllView.m; sourceTree = "<group>"; };
+		8E6BC4171F976ACD00FE5FEE /* UIButton+WebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		8E6BC4181F976ACD00FE5FEE /* UIButton+WebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
 		AFB000C4881AFA7034746A42 /* Pods-NetworkTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkTest/Pods-NetworkTest.release.xcconfig"; sourceTree = "<group>"; };
 		EB8763DA11F1C605A0115D5F /* libPods-NetworkTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,7 +187,9 @@
 				8E076EFA1F8F447400EA3B70 /* HomeNetApi.m */,
 				8E076F4E1F8F59F800EA3B70 /* HomeImagesModel.h */,
 				8E076F4F1F8F59F800EA3B70 /* HomeImagesModel.m */,
-				8E076F551F8F610B00EA3B70 /* LZAutoScrollView */,
+				8E6BC4181F976ACD00FE5FEE /* UIButton+WebCache.h */,
+				8E6BC4171F976ACD00FE5FEE /* UIButton+WebCache.m */,
+				8E6BC4111F9764C000FE5FEE /* HorScorllView */,
 				8E076F511F8F5CF600EA3B70 /* BaseModel */,
 				8E076ED61F8F420E00EA3B70 /* NetworkRequest */,
 				8E076EAA1F8F3F8900EA3B70 /* Main.storyboard */,
@@ -279,13 +284,13 @@
 			path = BaseModel;
 			sourceTree = "<group>";
 		};
-		8E076F551F8F610B00EA3B70 /* LZAutoScrollView */ = {
+		8E6BC4111F9764C000FE5FEE /* HorScorllView */ = {
 			isa = PBXGroup;
 			children = (
-				8E076F561F8F610B00EA3B70 /* LZAutoScrollView.h */,
-				8E076F571F8F610B00EA3B70 /* LZAutoScrollView.m */,
+				8E6BC4121F9764C900FE5FEE /* HorScorllView.h */,
+				8E6BC4131F9764C900FE5FEE /* HorScorllView.m */,
 			);
-			path = LZAutoScrollView;
+			path = HorScorllView;
 			sourceTree = "<group>";
 		};
 		8F3FD3CDF151A96D8F58EB44 /* Frameworks */ = {
@@ -480,9 +485,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E076F581F8F615100EA3B70 /* LZAutoScrollView.m in Sources */,
+				8E6BC4161F9766DC00FE5FEE /* HorScorllView.m in Sources */,
 				8E076F541F8F5D2500EA3B70 /* BaseModel.m in Sources */,
 				8E076F4D1F8F51AE00EA3B70 /* YTKNetworkPrivate.m in Sources */,
+				8E6BC4191F976ACD00FE5FEE /* UIButton+WebCache.m in Sources */,
 				8E076F4C1F8F519500EA3B70 /* YTKChainRequest.m in Sources */,
 				8E076F4B1F8F518500EA3B70 /* YTKNetworkConfig.m in Sources */,
 				8E076F4A1F8F518000EA3B70 /* YTKChainRequestAgent.m in Sources */,

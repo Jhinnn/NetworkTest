@@ -10,9 +10,9 @@
 
 @interface HomeImagesModel : BaseModel
 
-@property (nonatomic ,copy) NSString *state;
+@property (nonatomic ,copy) NSString *id;
 
-@property (nonatomic ,copy) NSString *title;
+@property (nonatomic ,copy) NSString *name;
 
 @property (nonatomic ,copy) NSString *path;
 

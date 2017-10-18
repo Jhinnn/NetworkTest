@@ -10,8 +10,16 @@
 #define PrefixHeader_h
 
 
+
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+
+
 #import "WB_NetApiMacro.h"
 #import "BaseModel.h"
+#import "UIButton+WebCache.h"
 
 
 #endif /* PrefixHeader_h */
